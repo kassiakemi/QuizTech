@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="style.css">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>QuizTech</title>
+    </head>
+
+    <body>
+        <div id="tela-inicial">
+
+            <h1><span class="icone-reciclagem">&#x267B;</span>QuizTech<span class="icone-reciclagem">&#x267B;</span></h1>
+            <h2>Você sabe como descartar corretamente o lixo eletrônico?</h2>
+            <p>Teste seus conhecimentos sobre tecnologia, meio ambiente e descarte correto de resíduos eletrônicos.</p>
+            <p>Responda às perguntas e descubra quanto você sabe sobre o impacto do lixo eletrônico no meio ambiente.</p>
+
+            <button id="btn-comecar">Começar o Quiz</button>
+        </div>
+        <div id="faixa-etaria" style="display: none;">
+
+            <h2>Qual sua faixa etária?</h2>
+            <p>Sua participação é anônima. Não solicitaremos nome, e-mail ou outros dados pessoais</p>
+            
+            <button data-idade="Até 17 anos">Até 17 anos</button>
+            <button data-idade="18 a 29 anos">18 a 29 anos</button>
+            <button data-idade="30 a 39 anos">30 a 39 anos</button>
+            <button data-idade="40 a 49 anos">40 a 49 anos</button>
+            <button data-idade="50 a 59 anos">50 a 59 anos</button>
+            <button data-idade="60 anos ou mais">60 anos ou mais</button>
+        </div>
+        <div id="quiz" style="display: none;">
+        <h2 id="pergunta"></h2>
+
+        <div id="alternativas"></div>
+
+        <div id="feedback" style="display: none;">
+            <div id="resultado-box">
+            <h3 id="resultado"></h3>
+            </div>
+            
+            <div id="informacoes-box">
+            <h3>Você Sabia?</h3>
+            <p id="voce-sabia"></p>
+                        
+            <h3>Impacto Ambiental</h3>
+            <p id="impacto-ambiental"></p>
+            </div>
+
+            <button id="btn-proxima">Próxima pergunta</button>
+            <button id="btn-pos-quiz" style="display: none;">Compartilhar para a pesquisa</button>
+        </div>     
+        </div>  
+
+        <div id="pesquisa" style="display: none;">
+            <h2>Você chegou ao final do QuizTech!</h2>
+            <p>Agora queremos saber o que você achou e o que ficou de aprendizado.</p>
+            <p>Suas respostas são anônimas e ajudam a avaliar se o quiz conseguiu despertar a conscientização sobre o descarte correto de eletrônicos.</p>
+            <h3>Depois de participar do quiz, você pretende mudar alguma atitude em relação ao descarte eletrônico?</h3>
+            <button class="opcao-pesquisa" data-grupo="atitude">Sim</button>
+            <button class="opcao-pesquisa" data-grupo="atitude">Um pouco</button>
+            <button class="opcao-pesquisa" data-grupo="atitude">Não</button>
+
+            <h3>Qual informação mais chamou sua atenção?</h3>
+            <button class="opcao-pesquisa" data-grupo="informacao">Pilhas e baterias</button>
+            <button class="opcao-pesquisa" data-grupo="informacao">Carregadores e cabos</button>
+            <button class="opcao-pesquisa" data-grupo="informacao">Wi-Fi, Bluetooth e radiofrequência</button>
+            <button class="opcao-pesquisa" data-grupo="informacao">Segurança dos dados</button>
+            <button class="opcao-pesquisa" data-grupo="informacao">Reutilização e vida útil</button>
+            <button class="opcao-pesquisa" data-grupo="informacao">Cartões de memória e pendrives</button>
+            <button class="opcao-pesquisa" data-grupo="informacao">Pontos de descarte</button>
+
+            <h3>Você sabe onde levar um eletrônico que não utiliza mais em Curitiba?</h3>
+            <button class="opcao-pesquisa" data-grupo="descarte">Sim</button>
+            <button class="opcao-pesquisa" data-grupo="descarte">Não</button>
+            <button class="opcao-pesquisa" data-grupo="descarte">Tenho uma ideia, mas não tenho certeza</button>
+
+            <h3>Qual equipamento eletrônico você tem em casa que não sabe como descartar corretamente?</h3>
+            <textarea id="resposta-aberta" rows="5" cols="50" placeholder="Digite aqui sua resposta..."></textarea>
+            <br><br>
+            <button id="btn-enviar-pesquisa">Enviar pesquisa</button>
+            <p id="mensagem-final" style="display: none;"></p>
+        </div>
+        <script src="script.js"></script>
+
+    </body>
+
+</html>
