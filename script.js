@@ -467,6 +467,7 @@ else if (numeroPergunta === 11) {
 }
 });
 const pesquisa = document.getElementById("pesquisa");
+const pontosDescarte = document.getElementById("pontos-descarte");
 botaoPosQuiz.addEventListener("click", function() {
     quiz.style.display = "none";
     pesquisa.style.display = "block";
@@ -531,9 +532,11 @@ botaoEnviarPesquisa.addEventListener("click", function() {
     
     console.log("Respostas do google:", resultado);
     console.log("Respostas finais:", respostas);
-    
+
     alert("Obrigado por participar do QuizTech!");
-    mensagemFinal.innerHTML = "O futuro não começa amanhã. Ele começa nas escolhas que fazemos hoje.<br>Obrigado por participar do QuizTech.";
+    
+    pesquisa.style.display = "none";
+    pontosDescarte.style.display = "block";
     mensagemFinal.style.display = "block";
     })
     .catch(function(erro) {
